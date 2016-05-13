@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;font-size: 14px;}
+		.nav4 {list-style: none;border-bottom: 10px solid #f60;padding-left: 50px;margin-top: 20px;height: 30px;width: 700px}
+	    .nav4 li{float: left;}
+	    .nav4 li a {display: block;height: 30px;line-height: 30px;background:#efefef;color:#333;text-decoration:none;width: 100px;text-align: center;margin-bottom: 1px;}
+		  .nav4 li a.on,.nav3 li a:hover{color: white ;background: #f60;height: 30px;line-height: 30px}
+		  .nav4 li ul li{float:none;background-color:#eee; margin:2px 0px;list-style: none;}
+		  .nav4 li ul li a:hover{color: white ;background: #f60;height: 30px;line-height: 30px}
+		  .nav4 li ul{ display:none;margin-top: 10px;}
+	</style>
+	 <script type="text/javascript" src="jquery-1.12.1.js"></script>
+	 <script type="text/javascript">
+
+	 	$(function(){
+	 		$(".menu").mouseover(function(){
+	 			$(this).children("ul").show();
+	 		})
+	 		$(".menu").mouseout(function(){
+	 			$(this).children("ul").hide();
+	 		})
+	 	})
+	 </script>
+</head>
+<body>
+	<ul class="nav4">
+    <li class="menu"><a class="on" href="#">首　　页</a>
+        <ul>
+          <li ><a href="#">首　　页</a></li>
+          <li><a href="#">新闻快讯</a></li>
+          <li><a href="#">产品展示</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+    </li>
+    <li><a href="#">新闻快讯</a></li>
+    <li><a href="#">产品展示</a></li>
+    <li><a href="#">售后服务</a>
+        <ul>
+          <li><a href="#">首　　页</a></li>
+          <li><a href="#">新闻快讯</a></li>
+          <li><a href="#">产品展示</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+    </li>
+    <li><a href="#">联系我们</a></li>
+  </ul>
+</body>
+</html>

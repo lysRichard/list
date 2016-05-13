@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;font-size: 14px;}
+		.nav {list-style: none;width: 100px;}
+		.nav li a {display: block;height: 30px;line-height: 30px;background:#efefef ;color:#333;text-decoration:none;width: 100px;text-indent: 20px;margin-bottom: 5px;}
+		.nav li a:hover{background-color: #f60;color: white }
+
+		/*.nav1 {list-style: none;border-bottom: 10px solid #f60;padding-left: 50px;margin-top: 20px;height: 30px;width: 700px}
+		.nav1 li{float: left;}
+		.nav1 li a {display: block;height: 30px;line-height: 30px;background:url(http://img.mukewang.com/53846438000168f901200060.jpg);color:#333;text-decoration:none;width: 100px;text-align: center;margin-bottom: 5px;}
+	.nav1 li a.on,.nav1 li a:hover{color: white ;background-position:0 -30px;}
+
+	.nav2 {list-style: none;border-bottom: 10px solid #f60;padding-left: 50px;margin-top: 20px;height: 30px;width: 700px}
+		.nav2 li{float: left;}
+		.nav2 li a {display: block;height: 30px;line-height: 30px;background:url(http://img.mukewang.com/53846438000168f901200060.jpg);color:#333;text-decoration:none;width: 100px;text-align: center;margin-bottom: 5px;}
+	.nav2 li a.on,.nav2 li a:hover{color: white ;background: #f60;height: 40px;margin-top: -10px;line-height: 40px}*/
+
+  .nav3 {
+      list-style: none;
+      border-bottom: 10px solid #f60;
+      padding-left: 50px;
+      margin-top: 20px;
+      height: 30px;
+      width: 700px
+  }
+    .nav3 li{
+      float: left;
+      position: relative;
+    }
+    .nav3 li a {
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      background:#efefef;
+      color:#333;
+      text-decoration:none;
+      width: 100px;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  .nav3 li a.on,.nav3 li a:hover{
+    color: white ;
+    background: #f60;
+    height: 30px;
+    line-height: 30px
+  }
+
+
+  .nav3 li ul li{
+    float: none;
+    background:#efefef ;
+    color:#333;
+    text-decoration: none;
+    list-style: none;
+    margin-top: 1px;
+    height: 30px;
+    line-height: 30px
+  }
+  .nav3 li ul{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
+  }
+  .nav3 li:hover ul{
+    display: block;
+  }
+
+  .nav4 {
+    list-style: none;
+    border-bottom: 10px solid #f60;
+    padding-left: 50px;
+    margin-top: 20px;
+    height: 30px;
+    width: 700px}
+    .nav4 li{float: left;
+    }
+    .nav4 li a {
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      background:#efefef;
+      color:#333;
+      text-decoration:none;
+      width: 100px;
+      text-align: center;
+      margin-bottom: 1px;
+    }
+  .nav4 li a.on,.nav3 li a:hover{
+    color: white ;
+    background: #f60;
+    height: 30px;
+    line-height: 30px
+  }
+  .nav4 li ul li{
+    float:none;
+    background-color:#eee;
+     margin:2px 0px;
+     list-style: none;
+   }
+  .nav4 li ul li a:hover{
+    color: white ;
+    background: #f60;
+    height: 30px;
+    line-height: 30px
+  }
+  .nav4 li ul{ 
+    display:none;
+    margin-top: 10px ;
+  }
+  
+  </style>
+</head>
+
+</head>
+<body>
+   
+  <script type="text/javascript">
+       function ShowSub(li) {
+            var subMenu =li.getElementsByTagName("ul")[0]  ;//JS实现二级菜单
+            subMenu.style.display = " block";
+        }
+
+        function HideSub(li) {
+            var subMenu = li.getElementsByTagName("ul")[0];
+            subMenu.style.display = "none";
+        }
+
+    </script>
+	<!-- <ul class="nav">
+    <li><a href="#">首　　页</a></li>
+    <li><a href="#">新闻快讯</a></li>
+    <li><a href="#">产品展示</a></li>
+    <li><a href="#">售后服务</a></li>
+    <li><a href="#">联系我们</a></li>
+  </ul>
+  <br>
+  <br>
+  <!- <ul class="nav1"> -->
+    <!-- <li ><a class="on" href="#">首　　页</a></li>
+    <li><a href="#">新闻快讯</a></li>
+    <li><a href="#">产品展示</a></li>
+    <li><a href="#">售后服务</a></li>
+    <li><a href="#">联系我们</a></li>
+  </ul>
+  <br>
+  <br> --> 
+  <!-- <ul class="nav2">
+    <li ><a class="on" href="#">首　　页</a></li>
+    <li><a href="#">新闻快讯</a></li>
+    <li><a href="#">产品展示</a></li>
+    <li><a href="#">售后服务</a></li>
+    <li><a href="#">联系我们</a></li>
+  </ul> -->
+ <!--  <br>
+  <br>
+    <script >
+    window.onload function(){
+       var a=document.getElementsByTagName('a')
+      for(var i=0;i<a.length;i++)
+      {
+        a[i].onmouseover=function(){
+          var This=this;
+          This.time= setInterval(function(){
+            This.style.width=This.offsetWidth+8+"px"
+            if (This.offsetWidth>=160) {
+                clearInterval(This.time);
+            }
+         },30 )
+        }
+      }
+    }
+
+    </script> -->
+  <ul class="nav3">
+    <li ><a class="on" href="#">首　　页</a>
+        <ul>
+          <li><a href="#">首　　页</a></li>
+          <li><a href="#">新闻快讯</a></li>
+          <li><a href="#">产品展示</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+    </li>
+    <li><a href="#">新闻快讯</a>  
+        <ul>
+          <li><a href="#">首　　页</a></li>
+          <li><a href="#">新闻快讯</a></li>
+          <li><a href="#">产品展示</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+    </li>
+    <li><a href="#">产品展示</a>
+      <ul>
+          <li><a href="#">首　　页</a></li>
+          <li><a href="#">新闻快讯</a></li>
+          <li><a href="#">产品展示</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+    </li>
+    <li><a href="#">售后服务</a>
+        <ul>
+          <li><a href="#">首　　页</a></li>
+          <li><a href="#">新闻快讯</a></li>
+          <li><a href="#">产品展示</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+    </li>
+    <li><a href="#">联系我们</a>
+        <ul>
+          <li><a href="#">首　　页</a></li>
+          <li><a href="#">新闻快讯</a></li>
+          <li><a href="#">产品展示</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+    </li>
+
+  
+  </ul>
+<br><br><br>  <br> <br><br><br><br><br><br><br><br><br> 
+  <ul class="nav4">
+    <li onmouseover="ShowSub(this)" onmouseout="HideSub(this)"><a class="on" href="#">首　　页</a>
+        <ul>
+          <li ><a href="#">首　　页</a></li>
+          <li><a href="#">新闻快讯</a></li>
+          <li><a href="#">产品展示</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+    </li>
+    <li><a href="#">新闻快讯</a></li>
+    <li><a href="#">产品展示</a></li>
+    <li onmouseover="ShowSub(this)" onmouseout="HideSub(this)"><a href="#">售后服务</a>
+        <ul>
+          <li><a href="#">首　　页</a></li>
+          <li><a href="#">新闻快讯</a></li>
+          <li><a href="#">产品展示</a></li>
+          <li><a href="#">售后服务</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+    </li>
+    <li><a href="#">联系我们</a></li>
+  </ul>
+</body>
+</html>
